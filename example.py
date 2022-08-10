@@ -39,9 +39,9 @@ def main():
         keys = pygame.key.get_pressed()
 
         if keys[pygame.K_UP]:
-            player_input = -1
-        elif keys[pygame.K_DOWN]:
             player_input = 1
+        elif keys[pygame.K_DOWN]:
+            player_input = -1
         else:
             player_input = 0
         
@@ -50,7 +50,7 @@ def main():
         out = game.process_frame(screen,
                            deltaTime,
                            player_input,
-                           -1 if game.paddle1.y > game.ball.y else 1)
+                           1 if game.paddle1.y > game.ball.y else -1)
     
         
         # update screen

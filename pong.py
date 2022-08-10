@@ -61,7 +61,7 @@ class Paddle:
                         (self.x, self.y, self.width, self.height))
     
     def move(self, deltaTime: float, _input: int = -1|0|1):
-        self.y += deltaTime * Paddle.VELOCITY * _input; 
+        self.y -= deltaTime * Paddle.VELOCITY * _input; 
     
     def handle_collision(self, ball: Ball, paddle0: bool):
         #  AABB collision
@@ -165,7 +165,7 @@ class PongGame:
         self.player0_score = 0
         self.player1_score = 0
 
-    def process_frame(self, display: pygame.Surface, deltaTime: float, input_0 = -1|0|1, input_1 = 1|0|1, drawHits: bool = False, drawScores: bool = True ):
+    def process_frame(self, display: pygame.Surface, deltaTime: float, input_0 = -1|0|1, input_1 = 1|0|1, drawHits: bool = False, drawScores: bool = True):
         
         # move paddles
         self.paddle0.move(deltaTime, input_0)
