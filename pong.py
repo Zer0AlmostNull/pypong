@@ -17,7 +17,7 @@ class GameInfo:
 class Ball:
     MAX_VELOCITY_X = 800
     MAX_VELOCITY_Y = 600
-    START_VEL_FACTOR_Y = .1
+    START_VEL_FACTOR_Y = 1
     
     COLOR = (255, 0, 0)
     x: float
